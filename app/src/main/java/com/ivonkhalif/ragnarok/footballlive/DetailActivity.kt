@@ -68,7 +68,7 @@ class DetailActivity : AppCompatActivity(), AnkoLogger {
 
 
         val bundle = intent.getBundleExtra("myBundle")
-        detail = bundle.getParcelable("selected_match")
+//        detail = bundle.getParcelable("selected_match")
         id = bundle.getString("id")
         idHome = bundle.getString("idhome")
         idAway = bundle.getString("idaway")
@@ -76,11 +76,11 @@ class DetailActivity : AppCompatActivity(), AnkoLogger {
         awayTeam= bundle.getString("teamaway")
         date= bundle.getString("date")
 
-        home_detail.text = detail.strHomeTeam
+        home_detail.text = homeTeam
         home_detail.isSelected = true
-        away_detail.text= detail.strAwayTeam
+        away_detail.text= awayTeam
         away_detail.isSelected = true
-        date_detail.text= detail.dateEvent
+        date_detail.text= date
         idHome = detail.idHomeTeam.toString()
         idAway = detail.idAwayTeam.toString()
 

@@ -41,7 +41,13 @@ class PastMatchFragment : Fragment(), AnkoLogger {
 
         matchAdapter = RVAdapterMatch(eventM){
             val bundle = Bundle()
-            bundle.putParcelable("selected_match", it)
+            bundle.putString("id",it.idEvent)
+            bundle.putString("idhome",it.idHomeTeam)
+            bundle.putString("idaway",it.idAwayTeam)
+            bundle.putString("teamhome",it.strHomeTeam)
+            bundle.putString("teamaway",it.strAwayTeam)
+            bundle.putString("date",it.dateEvent )
+//            bundle.putParcelable("selected_match", it)
             startActivity(intentFor<DetailActivity>("myBundle" to bundle))
         }
 
